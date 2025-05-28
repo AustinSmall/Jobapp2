@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="syle.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Application Form</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Job Application Form</h2>
+    <form action="YOUR_BACKEND_ENDPOINT" method="POST" enctype="multipart/form-data">
+
+      <label for="position">Position Applying For</label>
+      <select id="position" name="position" required>
+        <option value="">-- Select Position --</option>
+        <option value="Computers">Computers</option>
+        <option value="assistant">Teacher's Assistant</option>
+        <option value="Tables">Wiping Down Tables</option>
+        <option value="Lights">Lights</option>
+      </select>
+
+      <div class="name-row">
+        <div class="name-field">
+          <input type="text" id="firstName" name="firstName" placeholder="First Name" />
+        </div>
+        <div class="name-field">
+          <input type="text" id="lastName" name="lastName" placeholder="Last Name" />
+        </div>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <span style="font-weight:bold; display:block; margin-bottom:5px;">Gender</span>
+        <label style="margin-right: 15px;">
+          <input type="radio" name="gender" value="male" required> Male
+        </label>
+        <label style="margin-right: 15px;">
+          <input type="radio" name="gender" value="female"> Female
+        </label>
+        <label>
+          <input type="radio" name="gender" value="nonbinary"> Nonbinary
+        </label>
+      </div>
+
+      <div class="dob-row">
+        <div class="dob-field">
+          <input type="text" id="month" name="month" placeholder="Month" />
+        </div>
+        <div class="dob-field">
+          <input type="text" id="day" name="day" placeholder="Day" />
+        </div>
+        <div class="dob-field">
+          <input type="text" id="year" name="year" placeholder="Year" />
+        </div>
+      </div>
+
+      <input type="text" id="age" name="age" placeholder="Age" />
+
+      <div class="address-row">
+        <input type="text" id="address" name="address" placeholder="Address" />
+      </div>
+      <div class="city-state-zip-row">
+        <div class="city-field">
+          <input type="text" id="city" name="city" placeholder="City" />
+        </div>
+        <div class="state-field">
+          <input type="text" id="state" name="state" placeholder="State" />
+        </div>
+        <div class="zip-field">
+          <input type="text" id="zip" name="zip" placeholder="Zip Code" />
+        </div>
+      </div>
+
+      <input type="text" id="emergency-contact-name" name="emergency-contact-name" placeholder="Emergency Contact Name" />
+      <input type="text" id="relationship" name="relationship" placeholder="Relationship" />
+      <input type="text" id="phone-number" name="phone-number" placeholder="Phone Number" />
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>    
+</body>  
+<script src="script.js"></script>
+</html>
